@@ -7,7 +7,7 @@ import org.mockito.internal.matchers.LessThan;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.Matchers.greaterThan;
-import static org.hamcrest.Matchers.greaterThan;
+import static org.hamcrest.Matchers.lessThan;
 import static org.junit.Assert.*;
 import static org.junit.matchers.JUnitMatchers.containsString;
 
@@ -39,7 +39,7 @@ public class TestGreeter {
   public void greetShouldIncludeGreetingMessage() {
     String someone = "Hello from Agunigbo, Are you enjoying the process? Please answer me!";
 
-    assertThat(greeter.greet(someone).length(), is(lessThan(someone.length())));
+    assertThat(greeter.greet(someone).length(), is(greaterThan(someone.length())));
   }
 
     @Test
